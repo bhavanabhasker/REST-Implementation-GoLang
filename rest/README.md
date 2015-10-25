@@ -1,20 +1,47 @@
 Download all the files from github
 
+
 POST INSTALLATION : 
+
+
 Run the below dependencies 
+
+
 go get  github.com/gorilla/mux
+
+
 go get gopkg.in/mgo.v2
 
+
+
 How to execute : 
+
+
 Step 1 : go build
+
+
 Run the rest application 
+
+
 Step 2 : ./rest.exe
+
+
 OR
+
+
 Step 1: go run *.go 
 
+
+
 Creating the new locations
+
+
 1. POST/locations 
+
+
 Go to Postman
+
+
 Request : 
 {
    "name" : "John Smith",
@@ -23,7 +50,11 @@ Request :
    "state" : "CA",
    "zip" : "94113"
 }
+
+
 HTTP Response 201
+
+
 The response will be in the below format,
 {
    "id" : 12345,
@@ -37,12 +68,26 @@ The response will be in the below format,
       "long": -122.0841244
    }
 }
+
+
 2. GET locations
+
+
 a. When only locations is entered 
+
+
 Eg: Request :
+
+
  http://localhost:8080/locations
+ 
+ 
  HTTP Response 200
+ 
+ 
  All the entries in the table will be displayed. 
+ 
+ 
  Response 
  [
   {
@@ -59,8 +104,14 @@ Eg: Request :
   }
 ]
 
+
+
 b. When the location id is also entered 
+
+
 Request GET /locations/12345
+
+
 Response :
 {
    "id" : 12345,
@@ -74,7 +125,12 @@ Response :
       "long": -122.0841244
    }
 } 
+
+
 3. Update a location 
+
+
+
 Request : /locations/12345
 
 {
@@ -83,8 +139,14 @@ Request : /locations/12345
    "state" : "CA",
    "zip" : "94043"
 }
+
+
 Response 
+
+
 HTTP Response 201
+
+
 {
    "id" : 12345,
    "name" : "John Smith",
@@ -97,11 +159,23 @@ HTTP Response 201
      "lng" : -122.0841244
    }
 }
+
+
 4. Delete a location 
+
+
 Request :
+
+
  /locations/12345
+ 
+ 
 Response :
+
+
 HTTP Response 200
+
+
 
 
 
