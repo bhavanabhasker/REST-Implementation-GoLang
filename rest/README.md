@@ -127,7 +127,7 @@ Response :
 } 
 
 
-3. Update a location 
+3. Update a location : PUT 
 
 
 
