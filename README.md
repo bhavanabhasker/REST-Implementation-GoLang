@@ -11,9 +11,7 @@ The information may contain address details including the latitude and longitude
 2. Run the following dependencies 
 <pre>
 go get github.com/gorilla/mux
-
 go get gopkg.in/mgo.v2
-
 </pre>
 3. Execute the below commands after step 2
 <pre>
